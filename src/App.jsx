@@ -6,17 +6,12 @@ import Listado from "./components/Listado"
 
 
 function App() {
-  // Antes del return se escribe código JS, funciones o validaciones
-
 const [pacientes, setPacientes] = useState([]);
 
-  // Después del return se escribe el código que se refleja en pantalla
   return (
 
     <div className="container mx-auto mt-20">
-
       <Header />
-
       <div className="mt-12 md:flex">
 
         <Formulario 
@@ -24,7 +19,9 @@ const [pacientes, setPacientes] = useState([]);
         setPacientes={setPacientes}        
          />
 
-        <Listado />
+        <Listado        
+        pacientes={pacientes}     
+        />
       </div>
 
     </div>
